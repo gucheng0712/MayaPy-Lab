@@ -41,6 +41,7 @@ def set_animation(object_name, frames):
         for index, p in enumerate(points):
             deform_p = deform_point(frame, p)
             cmds.xform("{0}.vtx[{1}]".format(object_name, index), t=deform_p, a=True, ws=True)
+
         cmds.setKeyframe(object_name, t=frame, at='pnts')
 
 

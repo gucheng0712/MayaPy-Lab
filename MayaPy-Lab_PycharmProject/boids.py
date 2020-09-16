@@ -294,6 +294,7 @@ class IntOptionWidget(OptionWidget):
         self._slider.blockSignals(False)
 
     def _sliderValueChangedSlot(self, value):
+        print(value)
         self.setValue(value)
         self._setSpinBoxValue()
 
